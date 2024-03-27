@@ -1,0 +1,36 @@
+{
+  "name": "todo-api",
+  "version": "1.0.0",
+  "description": "API of todo app",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AEIS-FIS-EPN/William-Zapata.git"
+  },
+  "keywords": [
+    "API",
+    "express.js",
+    "JOI"
+  ],
+  "author": "William Zapata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AEIS-FIS-EPN/William-Zapata/issues"
+  },
+  "homepage": "https://github.com/AEIS-FIS-EPN/William-Zapata#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "convict": "^6.2.4",
+    "convict-format-with-validator": "^6.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "joi": "^17.12.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
+  }
+}

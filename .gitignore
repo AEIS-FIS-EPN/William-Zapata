@@ -1,0 +1,9 @@
+**/node_modules/
+**/.env
+
+Homework-1/BackEnd/.env
+Homework-1/BackEnd/node_module
+Homework-1/FrontEnd/.env
+Homework-1/FrontEnd/node_module
+
+.idea
