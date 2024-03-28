@@ -1,7 +1,9 @@
-import Image from "next/image";
+import TODOItem from "@/components/TODOItem";
 
 export default function Home() {
-  return (
-    <>Hola</>
-  );
+    return (
+        <div className={"p-[1%]"}>
+            <TODOItem/>
+        </div>
+    );
 }

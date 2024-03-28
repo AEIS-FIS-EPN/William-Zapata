@@ -1,21 +1,21 @@
-import {Courier_Prime} from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/ui/Header";
 
-const courierPrime = Courier_Prime({
-    weight: ['400', '700'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: "TODO",
-    description: "Organize your time",
+  title: "TODO App",
+  description: "William Zapata",
 };
 
-export default function RootLayout({children}) {
-    return (
-        <html lang="en">
-        <body className={courierPrime.className}>{children}</body>
-        </html>
-    );
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+      <Header/>
+      {children}
+      </body>
+    </html>
+  );
 }
