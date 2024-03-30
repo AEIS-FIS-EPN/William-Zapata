@@ -9,7 +9,7 @@ export default function Header() {
 
             <nav className={"flex flex-row justify-center items-center space-x-10 font-semibold text-lg"}>
                 <Link className={"px-3 hover:text-shark-950"} href={"#"}>Home</Link>
-                <Link className={"px-3 hover:text-shark-950"} href={"#"}>TODOs</Link>
+                <Link className={"px-3 hover:text-shark-950"} href={"#"}>TODO APP</Link>
             </nav>
 
             <Link className={"rounded-md bg-shark-500 px-3 py-2 hover:bg-shark-950"} href={"#"}>Contact me</Link>
