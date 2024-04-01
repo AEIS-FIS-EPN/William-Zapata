@@ -65,6 +65,7 @@ export default function UpdateTODO() {
             setTODO(result);
             setLoading(false);
         } catch (e) {
+            setLoading(false);
             toast.error("Error with the server");
         }
     };

@@ -7,8 +7,12 @@ if(node_env === "development") {
         backEnd: process.env.NEXT_PUBLIC_URL_BACK_END ?? "http://localhost:3001"
     }
 } else {
+    // config = {
+    //     backEnd: process.env.NEXT_PUBLIC_URL_BACK_END_DOCKER ?? "http://api-todo:3001"
+    // }
+
     config = {
-        backEnd: process.env.NEXT_PUBLIC_URL_BACK_END_DOCKER ?? "http://api-todo:3001"
+        backEnd: process.env.NEXT_PUBLIC_URL_BACK_END ?? "http://localhost:3001"
     }
 }
 

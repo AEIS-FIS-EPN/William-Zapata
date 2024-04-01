@@ -19,6 +19,7 @@ export default function Home() {
     /*Fetch the data*/
     const getTODOs = async () => {
         try {
+            console.log(config)
             const response = await fetch(`${config.backEnd}/api/v1/todos`);
             if (!response.ok) {
                 setLoading(false);
@@ -30,6 +31,7 @@ export default function Home() {
             setTODOs(result);
             setLoading(false);
         } catch (e) {
+            setLoading(false);
             toast.error("Error with the backend server");
         }
     }
