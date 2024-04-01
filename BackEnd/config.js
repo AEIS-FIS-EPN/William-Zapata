@@ -20,6 +20,11 @@ const config = convict({
         format: 'url',
         default: 'http://localhost:3000',
         env: 'URL_FRONT_END'
+    },
+    frontEndDocker: {
+        format: 'url',
+        default: 'http://todo:3000',
+        env: 'URL_FRONT_END_DOCKER'
     }
 });
 

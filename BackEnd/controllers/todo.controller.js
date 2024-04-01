@@ -36,7 +36,6 @@ const getTodoById = async (req, res) => {
 const postTodo = async (req, res) => {
     try {
         const {description, urgency, creationDate, completed} = req.body;
-        console.log({description, urgency, creationDate, completed})
         const response = await createTodoService({description, urgency, creationDate, completed});
 
         if ("error" in response) {

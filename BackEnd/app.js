@@ -5,6 +5,7 @@ import morgan from "morgan";
 
 const app = express();
 const urlFront =config.get("frontEnd");
+const urlFrontDocker =config.get("frontEndDocker");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -12,7 +13,7 @@ app.use(morgan("dev"));
 
 app.use(
     cors({
-        origin: `${urlFront}`,
+        origin: [`${urlFront}`, `${urlFrontDocker}`],
         methods: ["GET", "POST", "PUT", "DELETE"],
     })
 );
