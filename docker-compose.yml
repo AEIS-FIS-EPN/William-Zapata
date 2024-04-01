@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  api-todo:
+    build:
+      context: ./BackEnd
+      dockerfile: Dockerfile
+    image: api-todo:1.0.0
+    container_name: api-todo
+    ports:
+      - "3001:3001"
+  todo:
+    build:
+      context: ./FrontEnd
+      dockerfile: Dockerfile
+    image: todo:1.0.0
+    container_name: todo
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api-todo

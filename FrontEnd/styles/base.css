@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #0329D3;
+    --secondary-color: #026BD4;
+    --tertiary-color: #02ADD4;
+}
+
+.span--error {
+    color: darkred;
+    font-size: 0.9rem;
+}
