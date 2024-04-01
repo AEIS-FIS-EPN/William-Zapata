@@ -3,13 +3,11 @@
 import {useForm} from "react-hook-form";
 import Button from "@/components/ui/Button";
 import "../../styles/TODOItem.css"
-import {useRouter} from "next/navigation";
 import {creationDate} from "@/utils/creationDate";
 import {config} from "@/config";
 import toast from "react-hot-toast";
 
 export default function CreateTODO() {
-    const router = useRouter();
 
     const {
         register,

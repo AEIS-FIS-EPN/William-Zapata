@@ -8,6 +8,7 @@ import {creationDate} from "@/utils/creationDate";
 import {useEffect, useState} from "react";
 import {config} from "@/config";
 import toast from "react-hot-toast";
+import Loading from "@/components/ui/Loading";
 
 export default function UpdateTODO() {
     const [TODO, setTODO] = useState({
@@ -56,11 +57,13 @@ export default function UpdateTODO() {
             if (!response.ok) {
                 const result = await response.json();
                 const message = result.map(error => error.message);
+                setLoading(false);
                 return toast.error(`Error getting TODO \n ${message}`);
             }
 
             const result = await response.json();
             setTODO(result);
+            setLoading(false);
         } catch (e) {
             toast.error("Error with the server");
         }
@@ -68,8 +71,6 @@ export default function UpdateTODO() {
 
     const putTODO = async (TODO) => {
         try {
-            console.log(TODO)
-
             const options = {
                 method: "PUT",
                 headers: {
@@ -99,7 +100,10 @@ export default function UpdateTODO() {
     }
 
     return (<div className={"flex flex-col items-center justify-center h-[80dvh]"}>
-        <div className={"flex flex-col space-y-3 bg-gradient-to-r from-shark-300 to-shark-500 w-[25%] p-3 rounded-md"}>
+        {loading && <Loading/>}
+
+        {!loading && <div
+            className={"flex flex-col space-y-3 bg-gradient-to-r from-shark-300 to-shark-500 w-[25%] p-3 rounded-md"}>
             <form className={"flex flex-col space-y-5"}>
                 <div>
                     <div className={"flex flex-col"}>
@@ -133,6 +137,6 @@ export default function UpdateTODO() {
             <div className={"flex flex-row space-x-10"}>
                 <Button onClick={() => handleOnSubmit()}>Update</Button>
             </div>
-        </div>
+        </div>}
     </div>);
 }
